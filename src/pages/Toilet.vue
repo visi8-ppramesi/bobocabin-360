@@ -19,8 +19,9 @@ export default {
     mounted(){
         const elem = this.$refs.view
         const arrowOne = this.$refs.arrowOne
+        const arrowTwo = this.$refs.arrowTwo
         this.marzObj = createMarzipano(elem, '/assets/scenes/toilet/toilet.jpg')
-        this.hotSpots.arrowOne = this.marzObj.scene.hotspotContainer().createHotspot(arrowOne, { pitch: this.pitch, yaw: this.yaw })
+        this.hotSpots.arrowOne = this.marzObj.scene.hotspotContainer().createHotspot(arrowOne, this.coords)
     },
     data(){
         return {
@@ -28,8 +29,12 @@ export default {
             hotSpots: {
 
             },
-            pitch: -0.1041252045519049,
-            yaw: -0.05772739824072036
+            coords: {
+                arrowOne: {
+                    pitch: -0.1041252045519049,
+                    yaw: -0.05772739824072036
+                }
+            }
         }
     },
     methods: {
