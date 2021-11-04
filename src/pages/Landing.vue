@@ -5,7 +5,7 @@
         <div ref="view" class="h-screen w-screen viewer" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
-            <router-link to="">
+            <router-link to="/bed/">
                 <div class="text-white">Bed view</div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="white" viewBox="0 0 24 24" stroke="black">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
@@ -14,7 +14,7 @@
         </div>
 
         <div ref="arrowTwo" class="arrow-container">
-            <router-link to="/bed/">
+            <router-link to="/">
                 <div class="text-white">Outside view</div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="white" viewBox="0 0 24 24" stroke="black">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
@@ -23,8 +23,6 @@
         </div>
 
         <div ref="arrowThree" class="arrow-container">
-            <router-link to="/bed/">
-        <div ref="arrowTwo" class="arrow-container">
             <router-link to="/toilet/">
                 <div class="text-white">Toilet view</div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="white" viewBox="0 0 24 24" stroke="black">
@@ -52,30 +50,20 @@ export default {
     data(){
         return {
             marzObj: null,
-            hotSpots: {
-
-            },
+            hotSpots: {},
             coords: {
                 arrowOne: {
-                    yaw: -0.05450686952374362,
-                    pitch: 0.045168875296877076,
-                },
-                
-                arrowTwo: {
-                    yaw: 1.5809722048265398,
-                    pitch: 0.023208795976405128,
-                },
-
-                arrowThree: {
-                    yaw: 2.8944521949382933,
-                    pitch: 0.011521420157853512,
                     yaw: -0.100649973562619,
                     pitch: 0.05547168452443522,
                 },
                 arrowTwo: {
                     yaw: 2.9011735977849913,
                     pitch: -0.05547168452443522,
-                }
+                },
+                arrowThree: {
+                    yaw: 2.8944521949382933,
+                    pitch: 0.011521420157853512,
+                },
             }
         }
     },
