@@ -31,7 +31,7 @@ export default {
 
             },
             coords: {
-                arrowOne: {yaw: -0.4128655299637341, pitch: -0.2005156266929662365}
+                arrowOne: {yaw: -0.2528655299637341, pitch: -0.0051562669296624}
             }
         }
     },
@@ -48,6 +48,10 @@ export default {
 
 <style>
     .arrow-container{
+        width: 70px;
+        height: 70px;
+        margin-left: -35px;
+        margin-top: -70px;
         text-align: center;
         width: 100px;
         text-shadow: rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 1px 1px 0px;

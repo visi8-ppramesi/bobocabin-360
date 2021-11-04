@@ -2,7 +2,7 @@
     <div class="container">
         <input type="text" v-model="coords.arrowOne.yaw" @change="updateLocation">
         <input type="text" v-model="coords.arrowOne.pitch" @change="updateLocation">
-        <div ref="view" class="h-screen w-screen" @click="getCoords">
+        <div ref="view" class="h-screen w-screen viewer" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
             <router-link to="/bed/">
@@ -33,8 +33,8 @@ export default {
             },
             coords: {
                 arrowOne: {
-                    pitch: -0.1041252045519049,
-                    yaw: -0.05772739824072036
+                    yaw: -0.100649973562619,
+                    pitch: 0.05547168452443522,
                 }
             }
         }
@@ -52,6 +52,10 @@ export default {
 
 <style>
     .arrow-container{
+        width: 70px;
+        height: 70px;
+        margin-left: -35px;
+        margin-top: -70px;
         text-align: center;
         width: 100px;
         text-shadow: rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 1px 1px 0px;
@@ -61,4 +65,9 @@ export default {
         height: 60px;
         margin: auto;
     }
+    /* .viewer{
+        top: 0;
+        left: 0;
+        position: absolute;
+    } */
 </style>

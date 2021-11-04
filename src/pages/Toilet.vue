@@ -50,6 +50,10 @@ export default {
 
 <style>
     .arrow-container{
+        width: 70px;
+        height: 70px;
+        margin-left: -35px;
+        margin-top: -70px;
         text-align: center;
         width: 100px;
         text-shadow: rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 1px 1px 0px;
