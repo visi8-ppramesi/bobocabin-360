@@ -52,7 +52,7 @@ function createMarzipano(element, templateUrl) {
     //     tileSize: 1024,
     //     size: 1024
     // }]);
-    var geometry = new Marzipano.EquirectGeometry([{ width: 6080 }]);
+    var geometry = new Marzipano.EquirectGeometry([{ width: 3040 }]);
 
     // Create view.
     var limiter = Marzipano.RectilinearView.limit.traditional(1024, 100 * Math.PI / 180);
