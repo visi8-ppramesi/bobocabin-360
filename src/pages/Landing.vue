@@ -1,7 +1,5 @@
 <template>
     <div class="container">
-        <input type="text" v-model="coords.arrowOne.yaw" @change="updateLocation">
-        <input type="text" v-model="coords.arrowOne.pitch" @change="updateLocation">
         <div ref="view" class="h-screen w-screen viewer" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
@@ -57,12 +55,12 @@ export default {
                     pitch: 0.05547168452443522,
                 },
                 arrowTwo: {
-                    yaw: 2.9011735977849913,
-                    pitch: -0.05547168452443522,
+                    yaw: 1.5809722048265398,
+                    pitch: 0.023208795976405128,
                 },
                 arrowThree: {
-                    yaw: 2.8944521949382933,
-                    pitch: 0.011521420157853512,
+                    yaw: 2.9011735977849913,
+                    pitch: -0.05547168452443522,
                 },
             }
         }
