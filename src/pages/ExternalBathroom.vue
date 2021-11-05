@@ -28,7 +28,7 @@
         </div>
         <div ref="arrowFour" class="arrow-container">
             <router-link to="/">
-                <div class="text-white">Small Bobocabin view</div>
+                <div class="text-white">Exterior View</div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="white" viewBox="0 0 24 24" stroke="black">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
                 </svg>
@@ -63,10 +63,10 @@ export default {
 
             },
             coords: {
-                arrowOne: {yaw: -0.1528655299637341, pitch: -0.0051562669296624},
-                arrowTwo: {yaw: -0.2528655299637341, pitch: -0.0051562669296624},
-                arrowThree: {yaw: -0.6528655299637341, pitch: -0.0051562669296624},
-                arrowFour: {yaw: -0.3528655299637341, pitch: -0.0051562669296624},
+                arrowOne: {yaw: -0.0014463205333328233, pitch: -0.22321076545841656},
+                arrowTwo: {yaw: 1.3695532183947634, pitch: -0.18171578633322483},
+                arrowThree: {yaw: -2.47489079317225, pitch: 0.21068823038624274},
+                arrowFour: {yaw: 2.413352138231991, pitch: 0.2281757697878355},
             }
         }
     },

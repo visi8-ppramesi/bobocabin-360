@@ -33,7 +33,7 @@ export default {
 
             },
             coords: {
-                arrowOne: { yaw: 1.0887977785746852, pitch: 0.13635887604145935 }
+                arrowOne: { yaw: -1.2206402776350025, pitch: -0.16943891205332307 }
             }
         }
     },
