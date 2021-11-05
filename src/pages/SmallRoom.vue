@@ -43,14 +43,8 @@ export default {
             marzObj: null,
             hotSpots: {},
             coords: {
-                arrowOne: {
-                    yaw: -0.100649973562619,
-                    pitch: 0.05547168452443522,
-                },
-                arrowTwo: {
-                    yaw: 1.5809722048265398,
-                    pitch: 0.023208795976405128,
-                },
+                arrowOne: {yaw: 1.491881867808809, pitch: 0.009169457593543484},
+                arrowTwo: {yaw: -0.1645877237303477, pitch: 0.003791121442574763},
             }
         }
     },
