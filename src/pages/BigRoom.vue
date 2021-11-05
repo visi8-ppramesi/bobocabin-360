@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div ref="view" class="h-screen w-screen viewer" @click="getCoords">
+        <div ref="view" class="h-screen w-screen" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
             <router-link to="/bed/">
@@ -10,7 +10,6 @@
                 </svg>
             </router-link>
         </div>
-
         <div ref="arrowTwo" class="arrow-container">
             <router-link to="/">
                 <div class="text-white">Outside view</div>
@@ -34,12 +33,16 @@
 <script>
 import createMarzipano from '../utils/marzipanoBuilder.js'
 export default {
+    beforeDestroy(){
+        document.body.style.overflow = "visible";
+    },
     mounted(){
+        document.body.style.overflow = "hidden";
         const elem = this.$refs.view
         const arrowOne = this.$refs.arrowOne
         const arrowTwo = this.$refs.arrowTwo
         const arrowThree = this.$refs.arrowThree
-        this.marzObj = createMarzipano(elem, '/assets/scenes/cabin/cabin.jpg')
+        this.marzObj = createMarzipano(elem, '/assets/scenes/BigRoom.jpg')
         this.hotSpots.arrowOne = this.marzObj.scene.hotspotContainer().createHotspot(arrowOne, this.coords.arrowOne)
         this.hotSpots.arrowTwo = this.marzObj.scene.hotspotContainer().createHotspot(arrowTwo, this.coords.arrowTwo)
         this.hotSpots.arrowThree = this.marzObj.scene.hotspotContainer().createHotspot(arrowThree, this.coords.arrowThree)

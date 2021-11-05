@@ -1,12 +1,10 @@
 <template>
     <div class="container">
-        <input type="text" v-model="coords.arrowOne.yaw" @change="updateLocation">
-        <input type="text" v-model="coords.arrowOne.pitch" @change="updateLocation">
         <div ref="view" class="h-screen w-screen" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
             <router-link to="/">
-                <div class="text-white">Room view</div>
+                <div class="text-white">Exterior view</div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrow" fill="white" viewBox="0 0 24 24" stroke="black">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
                 </svg>
@@ -18,10 +16,14 @@
 <script>
 import createMarzipano from '../utils/marzipanoBuilder.js'
 export default {
+    beforeDestroy(){
+        document.body.style.overflow = "visible";
+    },
     mounted(){
+        document.body.style.overflow = "hidden";
         const elem = this.$refs.view
         const arrowOne = this.$refs.arrowOne
-        this.marzObj = createMarzipano(elem, '/assets/scenes/bed/bed.jpg')
+        this.marzObj = createMarzipano(elem, '/assets/scenes/FrontOffice.jpg')
         this.hotSpots.arrowOne = this.marzObj.scene.hotspotContainer().createHotspot(arrowOne, this.coords.arrowOne)
     },
     data(){

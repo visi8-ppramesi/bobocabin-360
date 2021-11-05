@@ -55,7 +55,7 @@ function createMarzipano(element, templateUrl) {
     var geometry = new Marzipano.EquirectGeometry([{ width: 3040 }]);
 
     // Create view.
-    var limiter = Marzipano.RectilinearView.limit.traditional(1024, 100 * Math.PI / 180);
+    var limiter = Marzipano.RectilinearView.limit.traditional(3040, 100 * Math.PI / 180);
     var view = new Marzipano.RectilinearView(null, limiter);
 
     // Create scene.

@@ -1,7 +1,5 @@
 <template>
     <div class="container">
-        <input type="text" v-model="coords.arrowOne.yaw" @change="updateLocation">
-        <input type="text" v-model="coords.arrowOne.pitch" @change="updateLocation">
         <div ref="view" class="h-screen w-screen" @click="getCoords">
         </div>
         <div ref="arrowOne" class="arrow-container">
@@ -18,10 +16,14 @@
 <script>
 import createMarzipano from '../utils/marzipanoBuilder.js'
 export default {
+    beforeDestroy(){
+        document.body.style.overflow = "visible";
+    },
     mounted(){
+        document.body.style.overflow = "hidden";
         const elem = this.$refs.view
         const arrowOne = this.$refs.arrowOne
-        this.marzObj = createMarzipano(elem, '/assets/scenes/toilet/toilet.jpg')
+        this.marzObj = createMarzipano(elem, '/assets/scenes/BigBathroom.jpg')
         this.hotSpots.arrowOne = this.marzObj.scene.hotspotContainer().createHotspot(arrowOne, this.coords.arrowOne)
     },
     data(){

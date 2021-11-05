@@ -1,29 +1,75 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Landing from '../pages/Landing'
-import Bed from '../pages/Bed'
-import Toilet from '../pages/Toilet'
+import BigRoom from '../pages/BigRoom'
+import BigBed from '../pages/BigBed'
+import BigBathroom from '../pages/BigBathroom'
+
+import Exterior from '../pages/Exterior'
+
+import ExternalBathroom from '../pages/ExternalBathroom'
+import Bathroom from '../pages/Bathroom'
+
+import FrontOffice from '../pages/FrontOffice'
+
+import SmallRoom from '../pages/SmallRoom'
+import SmallBed from '../pages/SmallBed'
 
 Vue.use(Router);
 
 const routes = [
     {
         path: '',
-        component: Landing,
-        name: 'LandingPage',
-        meta: { title: 'Landing Page', icon: 'dashboard', noCache: true },
+        component: Exterior,
+        name: 'ExteriorPage',
+        meta: { title: 'Exterior Page', icon: 'dashboard', noCache: true },
     },
     {
-        path: '/toilet',
-        component: Toilet,
-        name: 'ToiletPage',
-        meta: { title: 'Toilet Page', icon: 'dashboard', noCache: true },
+        path: '/externalbathroom',
+        component: ExternalBathroom,
+        name: 'ExternalBathroomPage',
+        meta: { title: 'External Bathroom Page', icon: 'dashboard', noCache: true },
     },
     {
-        path: '/bed',
-        component: Bed,
-        name: 'BedPage',
-        meta: { title: 'Bed Page', icon: 'dashboard', noCache: true },
+        path: '/bathroom',
+        component: Bathroom,
+        name: 'BathroomPage',
+        meta: { title: 'Bathroom Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/frontoffice',
+        component: FrontOffice,
+        name: 'FrontOfficePage',
+        meta: { title: 'Front Office Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/smallroom',
+        component: SmallRoom,
+        name: 'SmallRoomPage',
+        meta: { title: 'Small Room Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/smallbed',
+        component: SmallBed,
+        name: 'SmallBedPage',
+        meta: { title: 'Small Bed Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/bigroom',
+        component: BigRoom,
+        name: 'BigRoomPage',
+        meta: { title: 'Big Room Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/bigbed',
+        component: BigBed,
+        name: 'BigBedPage',
+        meta: { title: 'Big Bed Page', icon: 'dashboard', noCache: true },
+    },
+    {
+        path: '/bigtoilet',
+        component: BigBathroom,
+        name: 'BigBathroomPage',
+        meta: { title: 'Big Bathroom Page', icon: 'dashboard', noCache: true },
     },
 ]
 
